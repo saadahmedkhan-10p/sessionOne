@@ -6,6 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -24,6 +25,10 @@ public class ConnectionString {
         capabilities.setCapability("appium:deviceName", "emulator-5554");
         capabilities.setCapability("appium:automationName", "UiAutomator2");
         capabilities.setCapability("appium:app", System.getProperty("user.dir") + "/app/ApiDemos-debug.apk");
+//        capabilities.setCapability("appium:noReset", false);
+//        capabilities.setCapability("appium:avd", "Pixel_4_API_35");
+//        capabilities.setCapability("appium:avdLaunchTimeout", 300000);
+        //capabilities.setCapability("appium:newCommandTimeout", 120);
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), capabilities);
         System.out.println("Opening Appium Server");
@@ -39,4 +44,19 @@ public class ConnectionString {
         driver.quit();
     }
 
+//    @AfterTest
+//    public void tearDown() {
+//        if (driver != null) {
+//            driver.quit();
+//            System.out.println("Driver quit successfully.");
+//        }
+//
+//        // Optionally kill the emulator
+//        try {
+//            Runtime.getRuntime().exec("adb -s emulator-5554 emu kill");
+//            System.out.println("Emulator shutdown command issued.");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
