@@ -8,7 +8,7 @@ public class AndroidFindElements {
 
     public static void main(String[] args) throws Exception {
         AppiumDriver driver = CreateDriverSession.initializerDriver("Android");
-        WebElement webElement = driver.findElements(AppiumBy.accessibilityId("Accessibility")).get(1);
+        WebElement webElement = driver.findElement(AppiumBy.accessibilityId("Accessibility"));
         System.out.println(webElement.getText());
 
         webElement = driver.findElements(AppiumBy.className("android.widget.TextView")).get(2);
@@ -20,10 +20,7 @@ public class AndroidFindElements {
         webElement = driver.findElement(AppiumBy.xpath("//*[@text=\"Accessibility\"]"));
         System.out.println(webElement.getText());
 
-        webElement = driver.findElement((AppiumBy.tagName("Accessibility")));
-        System.out.println(webElement.getText());
-
-        webElement = driver.findElement(AppiumBy.id("android:id/text1"));
-        System.out.println(webElement.getText());
+//        webElement = driver.findElement(AppiumBy.id("android:id/text1"));
+//        System.out.println(webElement.getText());
     }
 }
