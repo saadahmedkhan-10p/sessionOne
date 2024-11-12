@@ -20,7 +20,9 @@ public class CreateDriverSession {
             case "Android":
                 capabilities.setCapability("appium:deviceName", "emulator-5554");
                 capabilities.setCapability("appium:automationName", "UiAutomator2");
-                capabilities.setCapability("appium:app", System.getProperty("user.dir") + "/app/ApiDemos-debug.apk");
+                capabilities.setCapability("appium:appPackage", "com.google.android.apps.maps");
+                capabilities.setCapability("appium:appActivity", "com.google.android.maps.MapsActivity");
+                //capabilities.setCapability("appium:app", System.getProperty("user.dir") + "/app/ApiDemos-debug.apk");
                 capabilities.setCapability("appium:noReset", false);
                 return new AndroidDriver(url, capabilities);
 
