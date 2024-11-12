@@ -13,7 +13,8 @@ public class AndroidGestures {
         //longClickGestureByID(driver);
         //longClickByCoordinates(driver);
         //dragAndDrop(driver);
-        pinchGesture(driver);
+        //pinchGesture(driver);
+        swipeGesture(driver);
     }
 
     public static void longClickGestureByID(AppiumDriver driver){
@@ -67,6 +68,15 @@ public class AndroidGestures {
                 "height", 199,
                 "percent", 0.75
         ));
+    }
 
+    public static void swipeGesture(AppiumDriver driver){
+        driver.findElement(AppiumBy.accessibilityId("Views")).click();
+
+        driver.executeScript("mobile: swipeGesture", ImmutableMap.of(
+                "left", 100, "top", 100, "width", 200, "height", 200,
+                "direction", "up",
+                "percent", 0.75
+        ));
     }
 }
