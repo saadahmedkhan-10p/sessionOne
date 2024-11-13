@@ -20,7 +20,5 @@ public class AndroidFindElements {
         webElement = driver.findElement(AppiumBy.xpath("//*[@text=\"Accessibility\"]"));
         System.out.println(webElement.getText());
 
-//        webElement = driver.findElement(AppiumBy.id("android:id/text1"));
-//        System.out.println(webElement.getText());
     }
 }
