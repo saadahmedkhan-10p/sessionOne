@@ -7,7 +7,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.SQLOutput;
 
 public class CreateDriverSession {
 
