@@ -22,10 +22,11 @@ public class AndroidFindElements {
 
 //        webElement = driver.findElement(AppiumBy.id("android:id/text1"));
 //        System.out.println(webElement.getText());
-        add(5, 5);
+        addition(5, 5);
            }
-    public static int add(int one, int two){
+    public static int addition(int one, int two){
         return one + two;
         //sum = one + two =
+        //sub = one - two;
     }
 }
